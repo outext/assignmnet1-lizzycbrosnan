@@ -11,12 +11,14 @@ from nltk.stem import PorterStemmer
 #After installing nltk you need to download a required packages like stopwords etc, inorder to do so you need to go python3 console and then type 'nltk.download(package name)
 #import stopwords similar to word_tokenize that was given in word_tokenize.py. Also remove the '(' and ')'.
 
-def download(g):
+def download(url):
     """ This function downloads the json data from the url."""
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
-    tags = soup.find_all(tag that you want to parse through)
-    # TODO add code here
+    tags = soup.find_all('title')
+    for i in tags:
+	total = total + 1
+
     return (total)
 
 
@@ -49,8 +51,8 @@ def frequency(e):
     return[]
 
 def show2(f):
-   """This function will show two words with highest frequency""" 
-    # TODO add code here
+   """This function will show two words with highest frequency"""
+    #TODO add code here
     return[]
 
 if __name__ == '__main__':
